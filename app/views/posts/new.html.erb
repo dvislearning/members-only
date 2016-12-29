@@ -1,0 +1,19 @@
+<h1>New Post</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:post, url: posts_path) do |f| %>
+
+      <%= f.label :subject %>
+      <%= f.text_field :email, class: 'form-control' %>
+
+      <%= f.label :message %>
+      <%= f.text_area :body, class: 'form-control' %>
+
+      <% if logged_in? %>
+        <%= "#{@current_user.name}  - 123456" %>
+      <% end %>
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
