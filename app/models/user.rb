@@ -9,21 +9,24 @@ class User < ApplicationRecord
 	validates :password, presence: true, length: {minimum: 6}, allow_nil: true
 
 	# Generates new, encrypted remember token
-	def new_remember_token
-		Digest::SHA1.hexdigest(SecureRandom.urlsafe_base64.to_s)
+	def self.new_remember_token
+		SecureRandom.urlsafe_base64
 	end
 
-
+	# Encrypts token
+	def self.digest(token)
+		Digest::SHA1.hexdigest(token.to_s)
+	end
 
 	private
 
-	# Makes email addresses lowercase 
+	# Downcases emails
 	def downcase_email
 		email.downcase!
 	end
 
 	# Saves remember_token to User upon creation
 	def save_token_to_user
-		self.remember_token = new_remember_token
+		self.remember_token = User.digest(User.new_remember_token)
 	end
 end
