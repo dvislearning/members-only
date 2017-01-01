@@ -9,25 +9,9 @@ module SessionsHelper
     @current_user = user
   end 
 
-  # Retrieves current user from db when remember cookie matches remember_token
-  def current_user
-    remember_token = User.digest(cookies[:remember_token])
-    @current_user ||= User.find_by(remember_token: remember_token)
-  end
-
-  # Sets current user
-  def current_user=(user)
-    @current_user = user
-  end  
-
   # Logs current user out of session
   def log_out
     @current_user = nil  	
     cookies.delete(:remember_token)
-  end
-
-  # Checks if #current_user returns false
-  def logged_in?
-  	!current_user.nil?
-  end
+  end 
 end

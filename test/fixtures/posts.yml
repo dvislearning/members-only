@@ -2,8 +2,12 @@
 
 one:
   name: MyString
+  subject: MyString
+  user_id: 1
   body: MyText
 
 two:
   name: MyString
+  subject: MyString
+  user_id: 1
   body: MyText

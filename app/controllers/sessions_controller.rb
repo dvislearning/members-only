@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   	if user && user.authenticate(params[:session][:password])
       log_in user
       flash[:success] = "Logged in User"
-      redirect_to static_pages_about_path
+      redirect_to root_path
   	else
   		flash.now[:danger] = 'Invalid Email and/or password'
   		render 'new'
@@ -17,6 +17,6 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out
-    redirect_to login_path
+    redirect_to root_path
   end
 end
