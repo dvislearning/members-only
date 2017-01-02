@@ -1,7 +1,7 @@
 <h1>What is 'Members Only?'</h1>
-<p>Members only <%= link_to "logged in", login_path %> is where top-secret, salacious messages are stored.</p>
+<p>Members only is where a user can annoymously post top secret messages.  A user must <%= link_to "logged in", login_path %> to post messages and to see who authored the posts in the index.  If a user is not logged in, the post's author will be listed as "REDACTED".</p>
 
-<p>To find out who posted the messages, use one of the following logins:</p>
+<p>To log in, visit the <%= link_to "log in page", login_path %>  and use one of the following credentials:</p>
 
 <table>
   <tr>
