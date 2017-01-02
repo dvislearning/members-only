@@ -6,7 +6,6 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		#@user = User.new(username: params[:username], email: params[:email], password: params[:password])
 		@post = Post.new(user_params)
 		@post.name = @current_user.name
 		@post.user_id = @current_user.id
@@ -29,6 +28,7 @@ class PostsController < ApplicationController
 		params.require(:post).permit(:subject,:body, :name)
 	end
 
+    # Redirects to login_url if not logged in
     def logged_in_user
       unless logged_in?
         flash[:danger] = "Please log in"

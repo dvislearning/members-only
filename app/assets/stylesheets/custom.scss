@@ -32,6 +32,12 @@ textarea {
   }
 }
 
+table, th, td {
+    padding: 3px;
+    border: 2px solid black;
+    text-align: center;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
