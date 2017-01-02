@@ -1,24 +1,13 @@
-# README
+# MEMBER'S ONLY
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Member's Only is an exercise in authentication in the Ruby on Rails framework.  Created posts are listed on the from pages with the names hidden.  A user must log in to see the names of who created the posts.
 
-Things you may want to cover:
+Part of The Odin Project's Ruby on [Rails Curriculum.](http://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication)
 
-* Ruby version
+Use the following credentials to log in:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+|             Email            | Password |
+|:----------------------------:|:--------:|
+|   momsspaghetti@example.com  |  foobar  |
+|   wheresmyipad@example.com   |  foobar  |
+| passwordisfoobar@example.com |  foobar  |
